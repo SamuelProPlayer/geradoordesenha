@@ -6,36 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senha</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS para o efeito de brilho */
-        .entropia {
-            font-size: 1.5rem;
-            color: #fff;
-            text-shadow: 
-                0 0 5px #ff00ff, 
-                0 0 10px #ff00ff, 
-                0 0 15px #ff00ff;
-            animation: brilho 1.5s infinite alternate;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        @keyframes brilho {
-            0% {
-                text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
-            }
-            100% {
-                text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
-            }
-        }
-
-        /* Outras partes do seu CSS (se necessário) */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1d1d1d;
-            color: #fff;
-        }
-    </style>
 </head>
 
 <body>
@@ -88,26 +58,12 @@
                         <p>Média</p>
                         <p>Forte</p>
                     </div>
-                    <p class="entropia"></p> <!-- Aqui o texto de entropia -->
+                    <p class="entropia"></p>
                 </div>
             </div>
         </div>
     </section>
     <script src="unlock.js"></script>
-    <script>
-        
-        document.addEventListener('DOMContentLoaded', function () {
-            const entropiaTexto = document.querySelector('.entropia');
-            const numeroCaracteres = 12; 
-
-            
-            const entropia = Math.log2(62 ** numeroCaracteres); 
-            const dias = Math.floor(2 ** entropia / (100e6 * 60 * 60 * 24));
-
-            
-            entropiaTexto.textContent = `Um computador pode levar até ${dias} dias para descobrir essa senha.`;
-        });
-    </script>
 </body>
 
 </html>
