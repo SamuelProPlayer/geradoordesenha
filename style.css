@@ -24,7 +24,19 @@ body {
     font-family: var(--roboto-mono);
     font-size: 32px;
      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #E71B32, 0 0 70px #E71B32, 0 0 80px #E71B32, 0 0 100px #E71B32, 0 0 150px #E71B32;
-}
+text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      animation: brilho 2s infinite alternate;
+    }
+
+    @keyframes brilho {
+      from {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      }
+      to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 0, 222, 0.8);
+      }
+    }
+    }
 
 .titulo-secundario {
     font-size: 24px;
